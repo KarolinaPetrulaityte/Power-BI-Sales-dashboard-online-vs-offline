@@ -1,0 +1,30 @@
+Project 2: Innovation Dashboard – Compare online vs. offline sales
+Key Insights
+1. Revenue by Country:
+• The United States generates the majority of total revenue (about $25M of $35.64M), and almost all of it is offline.
+• Australia and Germany stand out because online sales make up a huge chunk of their total country sales compared to others.
+• Why it matters: The US is the core market, but its online channel looks underdeveloped.
+• Recommendation: The US is the biggest market but almost entirely offline, so even a small increase in its online share would add a lot of revenue. Prioritize online marketing and promotions in the US, starting with the categories that already sell well online Accessories and Clothing.
+2. Sales & Order Volume Trend:
+• Sales and order volume are higher in 2014 months than in the same months of 2013, but the 2014 data stops halfway through the year (June), so full-year totals can’t be compared directly.  
+3. Category Breakdown:
+• Components generate the highest offline revenue around $22M but register zero online revenue.
+• Accessories and Clothing bring in the most online orders and customers.
+• Why it matters: Online sales rely on smaller, easy-to-ship products, while components are likely sold to stores and business customers.
+• Recommendation: Test whether components could be sold online, and promote accessories and clothing as add ons to bike purchases.
+4. Repeat Customers:
+•  Online has more repeat customers in total than offline (938 vs 360).
+
+Data Model explanation:
+1. Sales Information: 
+• SalesOrderHeader and SalesOrderDetail are linked together and cross filter is set to single so the filters flow correctly. 
+• SalesOrderHeader holds overall order dates, totals, and customer IDs
+• SalesOrderDetail holds number of items sold and product links.
+2. Product Information: 
+• Tables are linked from Product to ProductSubcategory to ProductCategory.
+• This is done so we can analyze the product categories.
+3. Customers Information:
+• The Customer table is linked to both the Person and Store tables. 
+• This is done to separate individual online customers from wholesale business customers.
+4. Country Information:
+• SalesTerritory links to CountryRegion to get data about countries and territories.
